@@ -9,5 +9,6 @@ import com.microservice.fleetLocation.entity.ActualLocation;
 
 @Repository
 public interface ActualLocationRepository extends JpaRepository<ActualLocation, Long>{
-    Optional<ActualLocation> findByTransportUnitId(Long unitId);
+    Optional<ActualLocation> findByTransportUnitId(Long transportUnitId);
+    Optional<ActualLocation> findByTransportUnitLicencePlate(String licencePlate);
 }

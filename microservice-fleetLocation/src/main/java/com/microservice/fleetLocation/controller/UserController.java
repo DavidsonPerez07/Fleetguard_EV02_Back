@@ -24,7 +24,7 @@ public class UserController {
 
     // Get all users
     @Operation(summary = "Obtener conductores", description = "Se obtienen en una lista todos los conductores")
-    @PreAuthorize("hasRole('ADMIN') or hasRole('COORDINATOR')")
+    //@PreAuthorize("hasRole('ADMIN') or hasRole('COORDINATOR')")
     @GetMapping
     public ResponseEntity<List<UserDTO>> getAllUsers() {
         return ResponseEntity.ok(userFacade.getAllUsers());

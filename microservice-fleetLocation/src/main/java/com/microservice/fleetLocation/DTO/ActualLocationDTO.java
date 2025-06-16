@@ -14,6 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ActualLocationDTO {
+    
     private Long id;
 
     private Float latitude;
@@ -24,5 +25,5 @@ public class ActualLocationDTO {
 
     private LocalDateTime timestamp;
 
-    private TransportUnit transportUnit;
+    private String transportUnit;
 }

@@ -23,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "actual_locations")
 public class ActualLocation {
-    @Id
+    @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -38,9 +38,6 @@ public class ActualLocation {
 
     @Column(nullable = false)
     private LocalDateTime timestamp;
-
-    @Version
-    private Long version;
 
     @OneToOne
     @JoinColumn(name = "transport_unit_id")
