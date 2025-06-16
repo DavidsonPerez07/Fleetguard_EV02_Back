@@ -6,6 +6,6 @@ import java.util.List;
 
 
 @Repository
-public interface  TransportUnitRepository extends JpaRepository<TransportUnit, Long> {
+public interface TransportUnitRepository extends JpaRepository<TransportUnit, Long> {
     List<TransportUnit> findAllByDeletedFalse();   
 }

@@ -45,6 +45,8 @@ public class TransportUnit {
     
     @Column(nullable = false) 
     private boolean deleted;
-    
+
+    @OneToOne(mappedBy = "transportUnit")
+    private ActualLocation actualLocation;
 }
 

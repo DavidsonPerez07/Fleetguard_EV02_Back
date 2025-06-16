@@ -20,6 +20,5 @@ public interface TransportUnitMapper {
     TransportUnitDTO toDTO(TransportUnit transportUnit);
     TransportUnitDetailDTO toDetailDTO(TransportUnit transportUnit);
     TransportUnit toEntity(TransportUnitDTO transportUnitDTO);  
-
 }
 
