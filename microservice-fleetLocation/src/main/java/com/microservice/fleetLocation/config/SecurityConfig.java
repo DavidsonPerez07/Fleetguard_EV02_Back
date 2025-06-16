@@ -26,8 +26,6 @@ import org.springframework.security.oauth2.jwt.Jwt;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @Configuration
 @EnableWebSecurity
@@ -42,7 +40,7 @@ public class SecurityConfig {
         return http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authz -> authz
-                .requestMatchers("/api/fleetLocation/fleet")
+                .requestMatchers("/api/fleetLocation/fleet", "/actuator/prometheus")
                 .permitAll()
                 .anyRequest().authenticated()
             )

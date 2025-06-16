@@ -28,7 +28,7 @@ public class SecurityConfig {
         return http
             .csrf(csrf -> csrf.disable())
             .authorizeExchange(exchanges -> exchanges
-                .pathMatchers("/api/auth/login", "/api/auth/register","/api/fleetLocation/fleet"
+                .pathMatchers("/api/auth/login", "/api/auth/register","/api/fleetLocation/fleet", "/actuator/prometheus"
                 ).permitAll()
                 .anyExchange().authenticated())
             .oauth2ResourceServer(oauth2 -> oauth2

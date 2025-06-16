@@ -30,7 +30,8 @@ public class SecurityConfig {
                 .requestMatchers("/api/auth/**", 
                                 "/v3/api-docs/**", 
                                 "swagger-ui/**", 
-                                "/swagger-ui.html").permitAll()
+                                "/swagger-ui.html", 
+                                "/actuator/prometheus").permitAll()
                 .anyRequest().authenticated()
             )
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

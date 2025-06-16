@@ -16,6 +16,7 @@ public class CorsGlobalConfiguration {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.addAllowedOrigin("http://localhost:3000");
         corsConfig.addAllowedOrigin("https://fleet-guar360.vercel.app");
+        corsConfig.addAllowedOrigin("https://localhost:9090");
         corsConfig.addAllowedHeader("*");
         corsConfig.addAllowedMethod("*");
         corsConfig.setAllowCredentials(true);

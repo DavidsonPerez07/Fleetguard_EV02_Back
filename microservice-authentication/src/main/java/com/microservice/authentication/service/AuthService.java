@@ -38,7 +38,7 @@ public class AuthService {
     @Value("${jwt.durationMinutes}")
     private int durationMinutes;
 
-
+    @Autowired
     public AuthService(UserRepository userRepository, RoleRepository roleRepository, UserMapper userMapper) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
