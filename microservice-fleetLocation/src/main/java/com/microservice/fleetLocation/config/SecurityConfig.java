@@ -41,8 +41,11 @@ public class SecurityConfig {
         return http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authz -> authz
-                .requestMatchers("/api/fleetLocation/fleet", "/actuator/prometheus")
-                .requestMatchers("/api/fleetLocation/fleet","/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**")
+                .requestMatchers("/api/fleetLocation/fleet", 
+                "/actuator/prometheus", 
+                "/swagger-ui.html", 
+                "/swagger-ui/**", 
+                "/v3/api-docs/**")
                 .permitAll()
                 .anyRequest().authenticated()
             )

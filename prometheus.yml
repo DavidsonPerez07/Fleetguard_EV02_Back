@@ -48,3 +48,9 @@ scrape_configs:
     scrape_interval: 15s
     static_configs:
       - targets: ["microservice-fleetLocation:8081"]
+
+  - job_name: "api-gateway"
+    metrics_path: "/actuator/prometheus"
+    scrape_interval: 15s
+    static_configs:
+      - targets: ["api-gateway:8080"]
